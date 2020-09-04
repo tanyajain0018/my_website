@@ -12,14 +12,12 @@ body, html {
 
 
 
-
-
 /* Animation properties */
-.star {
-  animation: star 10s ease-out infinite;
+.welcome {
+  animation: welcome 10s ease-out infinite;
 }
-.wars {
-  animation: wars 10s ease-out infinite;
+.tomysite {
+  animation: tomysite 10s ease-out infinite;
 }
 .byline span {
   animation: spin-letters 10s linear infinite;
@@ -29,7 +27,7 @@ body, html {
 }
 
 /* Keyframes */
-@keyframes star {
+@keyframes welcome {
   0% {
     opacity: 0;
     transform: scale(1.5) translateY(-0.75em);
@@ -47,7 +45,7 @@ body, html {
   }
 }
 
-@keyframes wars {
+@keyframes tomysite {
   0% {
     opacity: 0;
     transform: scale(1.5) translateY(0.5em);
@@ -92,15 +90,20 @@ body, html {
 }
 
 /* Make the 3D work on the container */
-.starwars-demo {
+.bg-container {
   perspective: 800px;
   transform-style: preserve3d;
 }
 
-/* General styles and layout */
+.bgimg {
+  width: 100%;
+  height: auto;
+  /*position: fixed; */
+    top: 0;
+    left: 0;
+}
 
-
-.starwars-demo {
+.bg-container {
   height: 17em;
   left: 50%;
   position: absolute;
@@ -114,16 +117,16 @@ body, html {
 }
 
 
-.star, .wars, .byline {
+.welcome, .tomysite, .byline {
   position: absolute;
 }
 
-.star {
-  top: -0.75em;
+.welcome {
+  top: -5em;
 }
 
-.wars {
-  bottom: -0.5em;
+.tomysite {
+  bottom: -3em;
 }
 
 .byline {
@@ -131,7 +134,7 @@ body, html {
   font-family: "ITC Serif Gothic", Lato;
   font-size: 2.25em;
   left: -2em;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.2em;
   right: -2em;
   text-align: center;
   text-transform: uppercase;
@@ -141,20 +144,16 @@ body, html {
 /*** Media queries for adjusting to different screen sizes ***/
 
 @media only screen and (max-width: 600px) {
-  .starwars-demo {
+  .bg-container {
     font-size: 10px;
   }
 }
 
 @media only screen and (max-width: 480px) {
-  .starwars-demo {
+  .bg-container {
     font-size: 7px;
   }
 }
-
-
-
-
 
 
 
@@ -191,7 +190,6 @@ body, html {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-  background-image: url('bg.jpg'); 
   min-height: 100%;
 }
 
